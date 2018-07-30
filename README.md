@@ -1,9 +1,9 @@
 # Thanks Nicolas for the base code which works really well!
 
-I used the code to make a action cam without buttons that records to the SD root in the highest possible resolution and 60fps.
-The 60fps really is a neccesity for action cam like footage. 
+I used the code from user Nicolashahn to make a action cam without buttons that starts to record to the SD root in 
+the highest possible resolution and 60fps as soon as power is supplied. Please allow the PiZero 60seconds to fully startup and start recording. Since I plan to use the cam on a plane or quadcopter (drone) the 60fps really is a neccesity for good looking footage. 
 
-## I made some changes to the code which are summed up below:
+## Made some changes to the original code:
 
 #### 30-7-2018
 - Changed the location where the video files will be stored from /home/pi/pi-helmet-cam/video to /boot/video (accesable from windows)
