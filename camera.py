@@ -13,7 +13,7 @@ from picamera import PiCamera
 # to specify lines not to run during actual use
 debug = False
 
-videodir = 'video'
+videodir = '/boot/video'
 filetype = 'h264'
 
 # how many 0s to put in front of counter number
