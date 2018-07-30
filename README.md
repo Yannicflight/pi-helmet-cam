@@ -55,12 +55,6 @@ Found in the main Google Doc for this project: https://docs.google.com/document/
 - NOTE: depending on what your username is/where you put this repo you may need to change the path
 - If you're running into problems starting the script on boot, check `./cronlog`.
 
-#### Ad a video folder to the SD card root
-
-- Either plug your SD card into a computer and create a folder called video inside the BOOT folder.
-Or in raspbian enter `sudo su` then `cd` then `cd /boot` then `mkdir video` and `sudo reboot` to return to the normal user mode.
-
-
 ## Files
 
 #### `camera.py`
