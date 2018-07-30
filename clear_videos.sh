@@ -1,1 +1,1 @@
-sudo rm -rf video/*
+sudo rm -rf /boot/video/*
