@@ -1,3 +1,22 @@
+# Thanks Nicolas for the base code which works really well!
+
+I used the code to make a action cam without buttons that records to the SD root in the highest possible resolution and 60fps.
+The 60fps really is a neccesity for action cam like footage. 
+
+## I made some changes to the code which are summed up below:
+
+#### 30-7-2018
+- Changed the location where the video files will be stored from /home/pi/pi-helmet-cam/video to /boot/video (accesable from windows)
+- Added superuser permission to the python camera.py line in boot_script.sh to allow camera.py to write in /boot/video
+- Changed sudo rm -rf video/* to sudo rm -rf /boot/video/* in clear_videos.sh 
+
+#### Make sure to make a "video" folder in the /BOOT directory of the SD card by:
+
+- Either plugging your SD card into a computer and create a folder called video inside the BOOT folder.
+Or in raspbian enter `sudo su` then `cd` then `cd /boot` then `mkdir video` and `sudo reboot` to return to the normal user mode.
+
+# ----- Original project text and instruction below -------
+
 # pi-helmet-cam
 Software for a Raspberry Pi Zero W motorcycle helmet camera
 
@@ -35,6 +54,11 @@ Found in the main Google Doc for this project: https://docs.google.com/document/
 
 - NOTE: depending on what your username is/where you put this repo you may need to change the path
 - If you're running into problems starting the script on boot, check `./cronlog`.
+
+#### Ad a video folder to the SD card root
+
+- Either plug your SD card into a computer and create a folder called video inside the BOOT folder.
+Or in raspbian enter `sudo su` then `cd` then `cd /boot` then `mkdir video` and `sudo reboot` to return to the normal user mode.
 
 
 ## Files
