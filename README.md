@@ -15,7 +15,7 @@ the highest possible resolution and 60fps as soon as power is supplied. Please a
 - Either plugging your SD card into a computer and create a folder called video inside the BOOT folder.
 Or in raspbian enter `sudo su` then `cd` then `cd /boot` then `mkdir video` and `sudo reboot` to return to the normal user mode.
 
-# ----- Original project text and instruction below -------
+# ------- Original project text and instruction below -------
 
 # pi-helmet-cam
 Software for a Raspberry Pi Zero W motorcycle helmet camera
