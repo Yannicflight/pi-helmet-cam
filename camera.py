@@ -20,14 +20,14 @@ filetype = 'h264'
 zfill_decimal = 3 
 
 # 8mp V2 camera
-resolution = (1640, 1232)
-framerate = 30
+resolution = (1280, 720)
+framerate = 40
 
 # number of seconds to film per shard
-interval = 5
+interval = 2
 
 # check for enough disk space every (this many) of above intervals
-space_check_interval = 100
+space_check_interval = 8000
 
 # what % of disk space must be free to start a new video
 required_free_space_percent = 15 # about an hour with 64gb card
@@ -123,6 +123,7 @@ def main():
         # Initialization
         camera.resolution = resolution
         camera.framerate = framerate
+        camera.shutter_speed = 7000
         while not enough_disk_space(required_free_space_percent):
             make_room(videodir)
         # start recording, chunking files every <interval> seconds
