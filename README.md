@@ -1,7 +1,7 @@
 # Thanks Nicolas for the base code which works really well!
 
 I used the code from user Nicolashahn to make a action cam without buttons that starts to record to the SD root in 
-the highest possible resolution and 60fps as soon as power is supplied. Please allow the PiZero approximately 60 seconds to fully startup and start recording. Since I plan to use the cam on a plane or quadcopter (drone) the 60fps really is a neccesity for good looking footage. 
+the highest possible resolution and 40fps as soon as power is supplied. Please allow the PiZero approximately 60 seconds to fully startup and start recording. Since I plan to use the cam on a plane or quadcopter (drone) the 60fps really is a neccesity for good looking footage. 
 
 ## Made some changes to the original code:
 
