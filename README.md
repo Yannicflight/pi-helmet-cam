@@ -46,7 +46,7 @@ Software for a Raspberry Pi Zero W motorcycle helmet camera
 
 Found in the main Google Doc for this project: https://docs.google.com/document/d/1HNO4g3zqxcsHzVkxqeB1x39abU7UEovlvAk7Gv2QWl4/edit?usp=sharing
 
-#### cronjob for recording on boot up:
+#### cronjob or rc.local to start recording on boot up:
 
 (run `sudo crontab -e` and add this line to the bottom)
 
@@ -54,6 +54,13 @@ Found in the main Google Doc for this project: https://docs.google.com/document/
 
 - NOTE: depending on what your username is/where you put this repo you may need to change the path
 - If you're running into problems starting the script on boot, check `./cronlog`.
+
+## OR
+
+Open /etc/rc.local with nano and add:
+
+cd /home/pi/pi-action-cam
+python camera.py
 
 ## Files
 
