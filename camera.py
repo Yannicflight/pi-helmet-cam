@@ -13,14 +13,14 @@ from picamera import PiCamera
 # to specify lines not to run during actual use
 debug = False
 
-videodir = '/boot/video'
+videodir = '/home/pi/'
 filetype = 'h264'
 
 # how many 0s to put in front of counter number
 zfill_decimal = 3 
 
 # 8mp V2 camera
-resolution = (1280, 720)
+resolution = (1640, 922)
 framerate = 40
 
 # number of seconds to film per shard
@@ -87,7 +87,7 @@ def enough_disk_space(required_free_space_percent):
     return enough
 
 def generate_filename(videodir, timestamp, counter):
-    """ going to look like: 2017-03-08-09-54-27.334326/000.h264 """
+    """ going to look like: video """
     filename_prefix = '{}/{}'.format(videodir, timestamp)
     if not os.path.isdir(filename_prefix):
         if debug: print 'Creating directory {}'.format(filename_prefix)
@@ -99,7 +99,7 @@ def generate_filename(videodir, timestamp, counter):
 
 def continuous_record(camera, videodir, interval):
     """ record <interval> second files with prefix """
-    timestamp = str(datetime.now()).replace(' ','-').replace(':','-')
+    timestamp = 'video'
     if debug: camera.start_preview()
     counter = 0 # number of video files created
     intervals_recorded = 0 # number of time intervals recorded
@@ -124,6 +124,9 @@ def main():
         camera.resolution = resolution
         camera.framerate = framerate
         camera.shutter_speed = 7000
+        camera.brightness = 48
+        camera.contrast = 20
+        camera.awb_mode = 'auto'
         while not enough_disk_space(required_free_space_percent):
             make_room(videodir)
         # start recording, chunking files every <interval> seconds
