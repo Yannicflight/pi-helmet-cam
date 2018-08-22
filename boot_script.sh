@@ -1,2 +1,2 @@
-cd /home/pi/pi-helmet-cam
+cd /home/pi/Pi-action-cam
 sudo python camera.py
