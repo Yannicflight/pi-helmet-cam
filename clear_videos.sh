@@ -1,1 +1,1 @@
-sudo rm -rf /boot/video/*
+sudo rm -rf /home/pi/video/*
