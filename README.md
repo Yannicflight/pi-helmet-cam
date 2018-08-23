@@ -13,7 +13,7 @@ the highest possible resolution and 40fps as soon as power is supplied. Please a
 #### Make sure to make a "video" folder in the /BOOT directory of the SD card by:
 
 - Either plugging your SD card into a computer and create a folder called video inside the BOOT folder.
-Or in raspbian enter `sudo su` then `cd` then `cd /boot` then `mkdir video` and `sudo reboot` to return to the normal user mode.
+Or in the terminal enter `cd /boot` then `sudo mkdir video` and `sudo reboot` to return to the normal user mode.
 
 # ------- Original project text and instruction below -------
 
@@ -46,7 +46,7 @@ Software for a Raspberry Pi Zero W motorcycle helmet camera
 
 Found in the main Google Doc for this project: https://docs.google.com/document/d/1HNO4g3zqxcsHzVkxqeB1x39abU7UEovlvAk7Gv2QWl4/edit?usp=sharing
 
-#### cronjob or rc.local to start recording on boot up:
+#### cronjob to start recording on boot up:
 
 (run `sudo crontab -e` and add this line to the bottom)
 
@@ -54,13 +54,6 @@ Found in the main Google Doc for this project: https://docs.google.com/document/
 
 - NOTE: depending on what your username is/where you put this repo you may need to change the path
 - If you're running into problems starting the script on boot, check `./cronlog`.
-
-## OR
-
-Open /etc/rc.local with nano and add:
-
-cd /home/pi/pi-action-cam
-python camera.py
 
 ## Files
 
